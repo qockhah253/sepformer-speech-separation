@@ -1,0 +1,6 @@
+speechbrain
+torchaudio
+gradio
+torch
+soundfile
+librosa
