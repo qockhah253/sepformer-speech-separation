@@ -10,10 +10,10 @@
 ---
 
 ## 🎯 Demo trực tuyến
+
 👉 **[Thử ngay tại đây](https://huggingface.co/spaces/quockhanh25032005/sepformer-demo)**
 
 Upload file âm thanh chứa 2 người nói → Model tự động tách thành 2 nguồn âm riêng biệt.
-
 (có thể lấy file mix sẵn được chuẩn bị ở mục examples để demo)
 
 ---
@@ -104,6 +104,10 @@ Tín hiệu hỗn hợp x(t)
 
 > SI-SNR giảm đều đặn qua các epoch, tốc độ cải thiện chậm dần từ epoch 7 cho thấy mô hình đang hội tụ. Khoảng cách nhỏ giữa train và valid SI-SNR cho thấy không có hiện tượng overfitting.
 
+### Kết quả đánh giá
+
+Mô hình được đánh giá trên 100 mẫu từ tập validation của Libri2Mix và đạt **SI-SNRi = 21.60 dB** — cho thấy tín hiệu sau phân tách có chất lượng cao hơn tín hiệu hỗn hợp đầu vào 21.60 dB, tương đương với mức cải thiện rõ rệt mà người nghe có thể cảm nhận được trực tiếp.
+
 ### Kết quả phân tách tín hiệu
 
 **Tín hiệu hỗn hợp (đầu vào):**
@@ -118,7 +122,7 @@ Tín hiệu hỗn hợp x(t)
 
 ![Source 2](assets/audio_2.png)
 
-
+---
 
 ## 📁 Cấu trúc thư mục
 
