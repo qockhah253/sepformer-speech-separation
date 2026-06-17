@@ -216,17 +216,6 @@ with torch.no_grad():
 
 ---
 
-## 👨‍💻 Tác giả
-
-| | |
-|---|---|
-| **Sinh viên** | Triệu Quốc Khánh |
-| **Giảng viên hướng dẫn** | CN. Vi Anh Quân |
-| **Trường** | Đại học Khoa học Tự nhiên — ĐHQGHN |
-| **Khoa** | Vật lý — Bộ môn Tin học Vật lý |
-| **Năm** | 2024 |
-
----
 
 <div align="center">
   <i>Nếu thấy hữu ích, hãy ⭐ star repo này!</i>
