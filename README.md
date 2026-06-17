@@ -121,20 +121,42 @@ Mô hình được huấn luyện trên **Libri2Mix** với cấu hình:
 | Hàm mất mát | SI-SNR + PIT |
 | GPU | NVIDIA Tesla T4 × 2 |
 
-### Loss curve
+### Quá trình huấn luyện
 
-| Epoch | Train SI-SNR (dB) | Valid SI-SNR (dB) |
-|:---:|:---:|:---:|
-| 1 | -15.2 | -16.6 |
-| 2 | -16.8 | -17.2 |
-| 3 | -17.2 | -17.3 |
-| 4 | -17.5 | -17.7 |
-| 5 | -17.6 | -17.8 |
-| 6 | -17.8 | -17.9 |
-| 7 | -18.0 | -18.0 |
-| 8 | -18.0 | -18.1 |
-| 9 | -18.2 | -18.1 |
-| 10 | -18.2 | -18.3 |
+Mô hình được huấn luyện trên **Libri2Mix** với cấu hình:
+
+| Siêu tham số | Giá trị |
+|---|---|
+| Số epoch | 10 |
+| Batch size | 1 |
+| Learning rate | 1.5×10⁻⁴ |
+| Optimizer | Adam |
+| Độ dài tín hiệu tối đa | 32.000 mẫu (4 giây) |
+| Hàm mất mát | SI-SNR + PIT |
+| GPU | NVIDIA Tesla T4 × 2 |
+
+### Loss Curve
+
+![Loss Curve](assets/loss.png)
+
+> **Nhận xét:** SI-SNR giảm đều đặn qua các epoch, tốc độ cải thiện chậm dần từ epoch 7 cho thấy mô hình đang hội tụ. Khoảng cách nhỏ giữa train và valid SI-SNR cho thấy không có hiện tượng overfitting.
+
+### Kết quả phân tách tín hiệu
+
+Hình dưới minh họa dạng sóng tín hiệu âm thanh trước và sau khi phân tách:
+
+**Tín hiệu hỗn hợp (đầu vào):**
+
+![Mix](assets/audio_mix.png)
+
+**Nguồn âm thứ nhất sau phân tách:**
+
+![Source 1](assets/audio_1.png)
+
+**Nguồn âm thứ hai sau phân tách:**
+
+![Source 2](assets/audio_2.png)
+
 
 > **Nhận xét:** SI-SNR giảm đều đặn qua các epoch, tốc độ cải thiện chậm dần từ epoch 7 cho thấy mô hình đang hội tụ. Khoảng cách nhỏ giữa train và valid SI-SNR cho thấy không có hiện tượng overfitting.
 
